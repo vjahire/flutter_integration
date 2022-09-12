@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnLaunch).setOnClickListener {
             startActivity(
 //                FlutterActivity.createDefaultIntent(this)
-                FlutterActivity.withNewEngine().initialRoute("/my_route").build(this)
+//                FlutterActivity.withNewEngine("my_engine_id").initialRoute("/my_route").build(this)
+                FlutterActivity.withCachedEngine("my_engine_id").build(this)
             )
         }
     }
